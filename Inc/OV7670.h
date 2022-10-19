@@ -13,7 +13,7 @@
 
 #include "main.h"
 #include "I2C.h"
-
+#include "OV7670_Reg.h"
 
 I2C_Config OV7670;
 
