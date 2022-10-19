@@ -10,11 +10,31 @@
 
 //https://www.youtube.com/watch?v=gp0FxbEmRSw
 
+static void OV7670_PCLK_Init( uint32_t frequency)
+{
+	RCC ->APB2ENR |= RCC_APB2ENR_TIM1EN;
+	TIM1 -> PSC = ((96000000) / ((frequency)*(100)))-1;
+	TIM1 -> ARR = 100;
+	TIM1 -> CCMR1 |= TIM_CCMR1_OC2M_1 | TIM_CCMR1_OC2M_2|TIM_CCMR1_OC2PE;
+	TIM1 -> BDTR |= TIM_BDTR_MOE;
+	TIM1 -> CCER |= TIM_CCER_CC2E;
+	TIM1 -> CR1 |= TIM_CR1_ARPE;
+	TIM1 -> EGR |= TIM_EGR_UG;
+	TIM1 -> CR1 |= TIM_CR1_CEN;
+
+}
+
+static void OV7670_Start_PCLK()
+{
+	TIM1 -> CCR1 = 50;
+}
+
 void OV7670_Init(I2C_TypeDef *port)
 {
 	OV7670.I2C = I2C1;
 	OV7670.mode = I2C_Fast_Mode;
 	I2C_Master_Init(OV7670);
+	OV7670_PCLK_Init(20000000);
 
 	I2C_Master_Write_Register(OV7670, OV7670_address, OV7670_GAIN, 0x00);
 	I2C_Master_Write_Register(OV7670, OV7670_address, OV7670_BLUE, 0x80);
