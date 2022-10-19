@@ -8,6 +8,7 @@
 
 #include "OV7670.h"
 
+//https://www.youtube.com/watch?v=gp0FxbEmRSw
 
 void OV7670_Init(I2C_TypeDef *port)
 {
@@ -31,6 +32,32 @@ void OV7670_Init(I2C_TypeDef *port)
 	I2C_Master_Write_Register(OV7670, OV7670_address, OV7670_AECH, 0x40);
 	I2C_Master_Write_Register(OV7670, OV7670_address, OV7670_CLKRC, 0x87);
 	I2C_Master_Write_Register(OV7670, OV7670_address, OV7670_COM7, 0x04);
+	I2C_Master_Write_Register(OV7670, OV7670_address, OV7670_COM8, 0xA7);
+	I2C_Master_Write_Register(OV7670, OV7670_address, OV7670_COM9, 0x82);
+	I2C_Master_Write_Register(OV7670, OV7670_address, OV7670_HSTART, 0x11);
+	I2C_Master_Write_Register(OV7670, OV7670_address, OV7670_HSTOP, 0x61);
+	I2C_Master_Write_Register(OV7670, OV7670_address, OV7670_VSTRT, 0x03);
+	I2C_Master_Write_Register(OV7670, OV7670_address, OV7670_VSTOP, 0x73);
+	I2C_Master_Write_Register(OV7670, OV7670_address, OV7670_PSHFT, 0x00);
+	I2C_Master_Write_Register(OV7670, OV7670_address, OV7670_MVFP, 0x01);
+	I2C_Master_Write_Register(OV7670, OV7670_address, OV7670_ADCCTR0, 0x04);
+	I2C_Master_Write_Register(OV7670, OV7670_address, OV7670_ADCCTR1, 0x02);
+	I2C_Master_Write_Register(OV7670, OV7670_address, OV7670_ADCCTR2, 0x01);
+	I2C_Master_Write_Register(OV7670, OV7670_address, OV7670_ADCCTR3, 0x00);
+	I2C_Master_Write_Register(OV7670, OV7670_address, OV7670_AEW, 0x75);
+	I2C_Master_Write_Register(OV7670, OV7670_address, OV7670_AEB, 0x63);
+	I2C_Master_Write_Register(OV7670, OV7670_address, OV7670_VPT, 0xD4);
+	I2C_Master_Write_Register(OV7670, OV7670_address, OV7670_BBIAS, 0x80);
+	I2C_Master_Write_Register(OV7670, OV7670_address, OV7670_EXHCL, 0x00);
+	I2C_Master_Write_Register(OV7670, OV7670_address, OV7670_HSYST, 0x08);
+	I2C_Master_Write_Register(OV7670, OV7670_address, OV7670_HSYEN, 0x30);
+	I2C_Master_Write_Register(OV7670, OV7670_address, OV7670_HREF, 0x80);
+	I2C_Master_Write_Register(OV7670, OV7670_address, OV7670_CHLF, 0x08);
+	I2C_Master_Write_Register(OV7670, OV7670_address, OV7670_ARBLM, 0x11);
+	I2C_Master_Write_Register(OV7670, OV7670_address, OV7670_ADC, 0x3f);
+
+
+
 
 
 

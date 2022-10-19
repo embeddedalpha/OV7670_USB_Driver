@@ -576,18 +576,19 @@ Discarded input sections
  .group         0x0000000000000000        0xc ./Src/OV7670.o
  .group         0x0000000000000000        0xc ./Src/OV7670.o
  .group         0x0000000000000000        0xc ./Src/OV7670.o
+ .group         0x0000000000000000        0xc ./Src/OV7670.o
  .text          0x0000000000000000        0x0 ./Src/OV7670.o
  .data          0x0000000000000000        0x0 ./Src/OV7670.o
  .bss           0x0000000000000000        0x0 ./Src/OV7670.o
  .bss.OV7670    0x0000000000000000        0x8 ./Src/OV7670.o
  .text.OV7670_Init
-                0x0000000000000000       0x30 ./Src/OV7670.o
- .debug_info    0x0000000000000000      0x1d3 ./Src/OV7670.o
+                0x0000000000000000      0x130 ./Src/OV7670.o
+ .debug_info    0x0000000000000000      0x20c ./Src/OV7670.o
  .debug_abbrev  0x0000000000000000      0x119 ./Src/OV7670.o
  .debug_aranges
                 0x0000000000000000       0x20 ./Src/OV7670.o
  .debug_ranges  0x0000000000000000       0x10 ./Src/OV7670.o
- .debug_macro   0x0000000000000000      0x300 ./Src/OV7670.o
+ .debug_macro   0x0000000000000000      0x30f ./Src/OV7670.o
  .debug_macro   0x0000000000000000      0xa7e ./Src/OV7670.o
  .debug_macro   0x0000000000000000       0x2e ./Src/OV7670.o
  .debug_macro   0x0000000000000000       0x28 ./Src/OV7670.o
@@ -644,10 +645,11 @@ Discarded input sections
  .debug_macro   0x0000000000000000       0x76 ./Src/OV7670.o
  .debug_macro   0x0000000000000000      0x302 ./Src/OV7670.o
  .debug_macro   0x0000000000000000       0x10 ./Src/OV7670.o
- .debug_line    0x0000000000000000      0x759 ./Src/OV7670.o
- .debug_str     0x0000000000000000    0x55ddd ./Src/OV7670.o
+ .debug_macro   0x0000000000000000      0x15a ./Src/OV7670.o
+ .debug_line    0x0000000000000000      0x779 ./Src/OV7670.o
+ .debug_str     0x0000000000000000    0x56102 ./Src/OV7670.o
  .comment       0x0000000000000000       0x51 ./Src/OV7670.o
- .debug_frame   0x0000000000000000       0x34 ./Src/OV7670.o
+ .debug_frame   0x0000000000000000       0x38 ./Src/OV7670.o
  .ARM.attributes
                 0x0000000000000000       0x34 ./Src/OV7670.o
  .group         0x0000000000000000        0xc ./Src/main.o
